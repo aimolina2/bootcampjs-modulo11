@@ -20,3 +20,6 @@ Para ver el resultado abre el navegador en `http://localhost:5173/src/apartadoa/
 Montamos la interfaz donde vamos a introducir los datos. Creamos la estructura en index.html y damos estilos en estilo.css (previamente reseteamos los estilos con el archivo reseteo.css).
 
 ## Leer texto introducido en el input
+
+En motor.ts creamos la funcion que lee el contenido del input del formulario.
+En main.ts llamamos ha esta función que se ejecuta una vez se ha cargado el DOM.
