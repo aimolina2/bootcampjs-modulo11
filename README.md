@@ -12,3 +12,11 @@ Pasos:
 _En este módulo presentamos dos prácticas, las cuales se encuentran en la carpeta correspondiente dentro de src: Carpeta apartadoA y Carpeta apartadoB_
 
 # Apartado A. Validar IBAN
+
+Para ver el resultado abre el navegador en `http://localhost:5173/src/apartadoa/index.html`
+
+## Interfaz y estilos. HTML y CSS.
+
+Montamos la interfaz donde vamos a introducir los datos. Creamos la estructura en index.html y damos estilos en estilo.css (previamente reseteamos los estilos con el archivo reseteo.css).
+
+## Leer texto introducido en el input

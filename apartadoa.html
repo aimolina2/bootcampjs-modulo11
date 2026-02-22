@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/reseteo.css" />
+    <link rel="stylesheet" href="./src/apartadoA/estilo.css" />
+
+    <title>Validar IBAN</title>
+  </head>
+  <body>
+    <main>
+      <p>Introduzca el IBAN</p>
+      <form action="" id="form">
+        <input
+          type="text"
+          name="iban"
+          id="iban"
+          placeholder="WW00 0000 0000 00 0000000000"
+        />
+        <button type="submit">
+          <img src="src/apartadoA/images/search.svg" alt="search" />
+        </button>
+      </form>
+
+      <div class="info">
+        <p class="info-formato-iban"></p>
+        <p class="info-is-valid-iban"></p>
+        <p class="datos-iban-banco">Banco:</p>
+        <p class="datos-iban-sucursal">Sucursal:</p>
+        <p class="datos-iban-digito">Dígito de control:</p>
+        <p class="datos-iban-cuenta">Número de cuenta:</p>
+      </div>
+    </main>
+    <script type="module" src="./src/apartadoA/main.ts"></script>
+  </body>
+</html>
