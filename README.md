@@ -35,3 +35,6 @@ En el archivo validaciones.ts creamos la expresión regular que nos ayuda a veri
 ## El IBAN es válido
 
 Instalamos la libraría _ibantools_ con `npm install ibantools` ya que es la que usaremos para verificar que el IBAN introducido es válido.
+En el archivo validaciones.ts creamos la `const esValidoElIBAN`donde eliminamos todos los espacios y guiones y hacemos la validación por medio de la libreria.
+
+Igual que antes, en el archivo ui.ts indicamos el mensaje a mostrar tanto si el IBAN es válido como si no lo es.
