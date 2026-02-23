@@ -44,4 +44,15 @@ Igual que antes, en el archivo ui.ts indicamos el mensaje a mostrar tanto si el 
 En el archivo model.ts creamos la interface datosIBAN que contiene cada uno de los parámetros que necesitamos extraer. Nos servirá para tipar las constantes creadas en el archivo validaciones.ts.
 Creamos la función que valida y extrae los datos por separado, según la expresión regular que hemos creado antes, y en el ui.ts hacemos que se muestren estos datos.
 
-##
+## Asignamos Banco al IBAN
+
+Creamos un archivo de constantes.ts donde recogemos los codigos y los bancos correspondientes como un array de objetos.
+En validaciones.ts creamos una costante para extraer el dato que necesitamos `const obtenerNombreBanco´. Usamos .find para localizar el número y comprobar que hay una coincidencia dentro del array creado anteriormente.
+
+En caso de que ocurra la coincidencia se devuelve `bancoEncontrado`(lo llamamos en la función anterior donde extraemos los datos, para que en lugar de los números nos de el valor del banco correspondiente). y si no nos devuelve "Desconocido".
+
+## Comprobamos que funciona
+
+Buscamos un IBAN válido y lo comprobamos, igual que con uno que no sea real y vemos que funciona correctamente.
+
+<img src="images/banco-search.png" alt="buscar">

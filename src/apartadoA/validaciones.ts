@@ -1,5 +1,6 @@
 import { isValidIBAN } from "ibantools";
 import { datosIBAN } from "./model";
+import { BANCO } from "./constantes";
 
 export const estaBienFormadoElIBAN = (value: string): boolean => {
   const patron =
@@ -25,10 +26,15 @@ export const extraerDatosIBAN = (value: string): datosIBAN => {
 
   if (coincidencia) {
     const { banco, sucursal, dc, cuenta } = coincidencia.groups as any;
-    datosExtraidos.banco = banco;
+    datosExtraidos.banco = obtenerNombreBanco(banco);
     datosExtraidos.sucursal = sucursal;
     datosExtraidos.dc = dc;
     datosExtraidos.cuenta = cuenta;
   }
   return datosExtraidos;
+};
+
+const obtenerNombreBanco = (codigoBanco: string): string => {
+  const bancoEncontrado = BANCO.find((banco) => banco.codigo === codigoBanco);
+  return bancoEncontrado ? bancoEncontrado.nombre : "Desconocido";
 };
