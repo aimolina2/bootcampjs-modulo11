@@ -1,4 +1,9 @@
-import { estaBienFormadoElIBAN, esValidoElIBAN } from "./validaciones";
+import { datosIBAN } from "./model";
+import {
+  estaBienFormadoElIBAN,
+  esValidoElIBAN,
+  extraerDatosIBAN,
+} from "./validaciones";
 
 export const mostrarInfo = (iban: string) => {
   limpiarInfo();
@@ -6,6 +11,10 @@ export const mostrarInfo = (iban: string) => {
   pintaParrafoEstaBienFormado(estaBienFormado);
   const esValido = esValidoElIBAN(iban);
   pintaParrafoEsValido(esValido);
+  if (estaBienFormado && esValido) {
+    const datosExtraidos = extraerDatosIBAN(iban);
+    pintarDatosExtraidos(datosExtraidos);
+  }
 };
 
 const limpiarInfo = () => {
@@ -38,5 +47,19 @@ const pintaParrafoEsValido = (esValido: boolean) => {
       ? crearElementoParrafo("El IBAN es válido")
       : crearElementoParrafo("El IBAN no es válido");
     datosInfo.appendChild(parrafo);
+  }
+};
+
+const pintarDatosExtraidos = (datos: datosIBAN) => {
+  const datosInfo = document.querySelector(".info");
+  if (datosInfo && datosInfo instanceof HTMLDivElement) {
+    const parrafoBanco = crearElementoParrafo(`Banco: ${datos.banco}`);
+    const parrafoSucursal = crearElementoParrafo(`Sucursal: ${datos.sucursal}`);
+    const parrafoDC = crearElementoParrafo(`DC: ${datos.dc}`);
+    const parrafoCuenta = crearElementoParrafo(`Cuenta: ${datos.cuenta}`);
+    datosInfo.appendChild(parrafoBanco);
+    datosInfo.appendChild(parrafoSucursal);
+    datosInfo.appendChild(parrafoDC);
+    datosInfo.appendChild(parrafoCuenta);
   }
 };

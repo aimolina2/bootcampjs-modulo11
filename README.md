@@ -38,3 +38,10 @@ Instalamos la libraría _ibantools_ con `npm install ibantools` ya que es la que
 En el archivo validaciones.ts creamos la `const esValidoElIBAN`donde eliminamos todos los espacios y guiones y hacemos la validación por medio de la libreria.
 
 Igual que antes, en el archivo ui.ts indicamos el mensaje a mostrar tanto si el IBAN es válido como si no lo es.
+
+## Extraemos los datos de banco, sucursal, dígito de control y número de cuenta
+
+En el archivo model.ts creamos la interface datosIBAN que contiene cada uno de los parámetros que necesitamos extraer. Nos servirá para tipar las constantes creadas en el archivo validaciones.ts.
+Creamos la función que valida y extrae los datos por separado, según la expresión regular que hemos creado antes, y en el ui.ts hacemos que se muestren estos datos.
+
+##
