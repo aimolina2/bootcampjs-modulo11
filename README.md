@@ -13,7 +13,7 @@ _En este módulo presentamos dos prácticas, las cuales se encuentran en la carp
 
 # Apartado A. Validar IBAN
 
-Para ver el resultado abre el navegador en `http://localhost:5173/src/apartadoa/index.html`
+Para ver el resultado abre el navegador en `http://localhost:5173/apartadoa.html`
 
 ## Interfaz y estilos. HTML y CSS.
 
@@ -56,3 +56,11 @@ En caso de que ocurra la coincidencia se devuelve `bancoEncontrado`(lo llamamos 
 Buscamos un IBAN válido y lo comprobamos, igual que con uno que no sea real y vemos que funciona correctamente.
 
 <img src="images/banco-search.png" alt="buscar">
+
+# Apartado B. Extraer enlaces
+
+Para ver el resultado abre el navegador en `http://localhost:5173/apartadob.html`
+
+## Interfaz y estilo CSS
+
+Incluimos un apartadob.html con la interfaz y le damos estilo desde los archivos reseteo.css (que usamos también en el anterior apartado) y estilo.css (dentro de la carpeta apartado B).
