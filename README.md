@@ -64,3 +64,26 @@ Para ver el resultado abre el navegador en `http://localhost:5173/apartadob.html
 ## Interfaz y estilo CSS
 
 Incluimos un apartadob.html con la interfaz y le damos estilo desde los archivos reseteo.css (que usamos también en el anterior apartado) y estilo.css (dentro de la carpeta apartado B).
+
+## Leer texto introducido en el `textarea`
+
+La función que activa el formulario la invocamos una vez se haya cargado el DOM desde main.ts. En motor.ts creamos las funciones que:
+
+- Inicializan el formulario
+- Activan el botón _Extraer imágenes_
+
+## Expresión regular
+
+Creamos la expresión regular a través de la que vamos a extraer los datos de las urls en el archivo extraer-img.ts
+
+Después pintaremos los datos extraidos en la interfaz.
+
+## Mostrar datos
+
+Igual que en el ejercicio anterior, en el ui.ts limpiamos el contenedor, y volcamos los datos. Creamos el elemento en el html y creamos los párrafos que contienen la información.
+
+## Comprobamos que funciona
+
+Copiamos y pegamos el html en la interfaz y visualizamos el listado de urls.
+
+<img src="images/images-urls.png" alt="urls">
