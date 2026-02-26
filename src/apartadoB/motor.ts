@@ -1,4 +1,4 @@
-import { mostrarUrls } from "./ui";
+import { mostrarUrls, mostrarImagenes } from "./ui";
 
 export const inicializarFormulario = () => {
   const form = document.querySelector("#form");
@@ -12,5 +12,6 @@ const submitForm = (event: SubmitEvent) => {
   const codigoHTML = document.querySelector("#campo-codigo");
   if (codigoHTML && codigoHTML instanceof HTMLTextAreaElement) {
     mostrarUrls(codigoHTML.value);
+    mostrarImagenes(codigoHTML.value);
   }
 };

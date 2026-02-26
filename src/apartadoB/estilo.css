@@ -64,3 +64,20 @@ form button:hover {
 textarea::placeholder {
   color: #ccc;
 }
+
+.grid-img {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+.grid-img img {
+  width: 50%;
+  height: auto;
+  border-radius: 0.2rem;
+}
+
+.grid-img > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

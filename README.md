@@ -87,3 +87,14 @@ Igual que en el ejercicio anterior, en el ui.ts limpiamos el contenedor, y volca
 Copiamos y pegamos el html en la interfaz y visualizamos el listado de urls.
 
 <img src="images/images-urls.png" alt="urls">
+
+## Extra. Mostrar las imágenes en un grid.
+
+Repetimos los mismos pasos que para pintar los enlaces.
+
+1. Añadimos un div en el html, donde después se mostrarán las imagenes.
+2. En `ui.ts` creamos las funciones para limpiar el div y que aparezca vacío, pintar las imágenes dentro del div que hemos creado, crear el elemento imagen y mostrar las imagenes pasándole el código HTML del que se extraen los enlaces de las imágenes.
+3. En el `motor.ts` añadimos que cuando encuentre las URLS las muestre como texto, pero también que nos muestre las imágenes (llamamos a la función que acabamos de crear)
+4. Arrancamos el servidor donde están las imágenes para así poder comprobar que funciona. Y una vez visualizamos las imágenes le damos estilo en la hoja `estilo.css`.
+
+<img src="images/images-grid.png" alt="urls">
